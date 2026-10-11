@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@font-face {
+    font-family:"New Rocker", system-ui ;
+    src: url(/font/New_Rocker.zip);
+}
+
+.pfundoHome{
+    background-image: url(/img/fundo-vermelho\ .jpg);
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+display: flex;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+justify-content: center;
+}
+
+
+
+form{
+    font-family:"New Rocker", system-ui ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    align-items: center;
+}
+
+button{
+    font-family:"New Rocker", system-ui ;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    background: rgb(240, 239, 234);
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.MenuBotao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
