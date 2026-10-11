@@ -18,7 +18,9 @@ align-items: center;
 justify-content: center;
 }
 
-
+.ppp{
+    font-size: 30px;
+}
 
 form{
     font-family:"New Rocker", system-ui ;
