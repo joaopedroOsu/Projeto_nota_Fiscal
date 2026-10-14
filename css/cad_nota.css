@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+@font-face {
+    font-family:"New Rocker", system-ui ;
+    src: url(/font/New_Rocker.zip);
+}
+
+.pfundocad{
+    background-image: url(/img/fundo-vermelho\ .jpg);
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+justify-content: center;
+}
+
+button{
+    font-family:"New Rocker", system-ui ;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    background: rgb(240, 239, 234);
+    cursor: pointer;
+font-size: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;  
+}
+
+.IMGLADOCADUNI{
+    display: flex;
+    justify-content: center ;
+    margin: 10px;
+}
+.pp{
+    
+    font-size: 30px;
+    
+}
+
+input{
+    width: 500px;
+    height: 38px;
+    padding: 0 12px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 18px;
+    
+}
+
+form{
+    font-family:"New Rocker", system-ui ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    
+}

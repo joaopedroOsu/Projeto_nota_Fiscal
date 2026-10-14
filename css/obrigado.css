@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+@font-face {
+    font-family:"New Rocker", system-ui ;
+    src: url(/font/New_Rocker.zip);
+}
+
+.pfundocad{
+    background-image: url(/img/Fundo\ Arcano\ Sombrio\ em\ Preto\ e\ Branco.png);
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.IMGLADOCADUNI {
+    display: block;
+}
+.mensagem {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+p{
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family:"New Rocker", system-ui ;
+}
+
+button{
+    font-family:"New Rocker", system-ui ;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    background: rgb(240, 239, 234);
+    cursor: pointer;
+font-size: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;  
+}
