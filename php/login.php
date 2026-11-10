@@ -1,46 +1,22 @@
 <?php
-//incluindo o arquivo de conexão para utilizar a variaveis que contem a conexão
 include 'conexao.php';
 
-
-//trazer os dados do formulario
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
+$select = $conexao->prepare("SELECT NM_USUARIO, EMAIL FROM TB_USUARIO WHERE EMAIL = ? AND senha = ?");
+$select->bind_param("ss", $email, $senha);
+$select->execute();
+$result = $select->get_result()->fetch_assoc();
 
-
-//guardando instrução sql dentro da variavel $select
-$select = "SELECT * FROM TB_USUARIO WHERE EMAIL = '$email' AND senha = '$senha'";
-
-
-//utilizar a função query() para executar a instrução sql vindo da variavel $select
-$query = $conexao->query($select);
-
-
-//utilizar a função fetch_assoc() para pegar o resultado do select
-$result = mysqli_fetch_assoc($query);
-
-
-$email_banco = $result['EMAIL'];
-$senha_banco = $result['senha'];
-
-
-//verificando se o email e senha do banco está igual ao do formulario
-
-
-if ( $email == $email_banco && $senha == $senha_banco ) {
-    
+if ($result) {
     session_start();
-    $_SESSION['email'] =  $senha_banco;
-    $_SESSION['nome'] = $result['NM_USUARIO'];
-
+    $_SESSION['email'] = $result['EMAIL'];
+    $_SESSION['nome']  = $result['NM_USUARIO'];
 
     header("Location: ../home.html");
-
-
+    exit;
+} else {
+    echo "<script>alert('Email ou senha incorretos'); window.location.href='../index.html';</script>";
 }
-
-
-
-
 ?>

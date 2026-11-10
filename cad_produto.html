@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar Produto</title>
     <link rel="stylesheet" href="css/cad_produto.css">
 </head>
 <body>
@@ -11,36 +11,27 @@
 <DIV class="IMGLADOCADUNI">
 <img src="/img/count1@2x.png" height="200px" alt="">
 </DIV>
-    
 
+ <form action="php/insert_produto.php" method="post">
 
- <form action="" method="post">
-
-    
    <p class="pp">CADASTRAR PRODUTO!!!</p>
-    <label for="nomecompleto">Nome do Produto</label>
-    <input type="text" name="CNPj" id="CNPj">
+    <label for="nome_produto">Nome do Produto</label>
+    <input type="text" name="nome_produto" id="nome_produto" required>
 
-    <label for="email">Valor Unitário</label>
-    <input type="text" name="Razão" id="Razão">
-
-
+    <label for="valor_unitario">Valor Unitário</label>
+    <input type="text" name="valor_unitario" id="valor_unitario" required>
 
     <div class="button">
-            <button type="button" onclick="window.location.href='/obrigado.html'"><strong>Cadastrar</strong></button>
-        </div> 
+        <button type="submit"><strong>Cadastrar</strong></button>
+    </div>
 
-        <div class="button">
-            <button type="button" onclick="window.location.href='/home.html'"><strong>Menu</strong></button>
-        </div>
+    <div class="button">
+        <button type="button" onclick="window.location.href='/home.html'"><strong>Menu</strong></button>
+    </div>
 
 </form>
 
-
-
-
-
-</main>   
+</main>
 
 </body>
 </html>

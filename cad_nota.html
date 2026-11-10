@@ -1,45 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar Nota</title>
     <link rel="stylesheet" href="css/cad_nota.css">
 </head>
 <body>
-    
+
  <main class="pfundocad">
 <DIV class="IMGLADOCADUNI">
 <img src="/img/mode-fruits@2x.png" height="540px" alt="">
     </DIV>
 
-<form action="" method="post">
+<form action="php/insert_nota.php" method="post">
    <p class="pp">CADASTRAR NOTA!!!</p>
-    <label for="nomecompleto">Data de Emissão</label>
-    <input type="text" name="Emissão" id="Emissão">
+    <label for="dt_emissao">Data de Emissão</label>
+    <input type="date" name="dt_emissao" id="dt_emissao" required>
 
-    <label for="email">Data de Envio</label>
-    <input type="text" name="data" id="data">
-    
-    <label for="senha">CNPJ</label>
-    <input type="text" name="CNPJ" id="CNPj">
+    <label for="dt_envio">Data de Envio</label>
+    <input type="date" name="dt_envio" id="dt_envio" required>
 
-    <label for="email">Valor Total</label>
-    <input type="text" name="Valor" id="valor">
+    <label for="cnpj">CNPJ</label>
+    <input type="text" name="cnpj" id="cnpj" maxlength="14" required>
+
+    <label for="vl_total">Valor Total</label>
+    <input type="text" name="vl_total" id="vl_total" required>
 
     <div class="button">
-        <button type="button" onclick="window.location.href='/obrigado.html'"><strong>Cadastrar</strong></button>
-    </div> 
+        <button type="submit"><strong>Cadastrar</strong></button>
+    </div>
 
     <div class="button">
         <button type="button" onclick="window.location.href='/home.html'"><strong>Menu</strong></button>
-    </div> 
-
-    </form>
+    </div>
 
 </form>
-
-
 
     </main>
 

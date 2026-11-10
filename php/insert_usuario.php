@@ -1,19 +1,21 @@
 <?php
 include 'conexao.php';
 
-$nomeCompleto = $_POST['nomemompleto'];
+$nomecompleto = $_POST['nomecompleto'];
 $email = $_POST['email'];
-$senha = $POST['senha'];
-//$confirmarsenha
+$senha = $_POST['senha'];
 
-$insert = "insert into TB_USUARIO values (null, '$nomecompleto', '$email', '$senha')";
+$insert = $conexao->prepare(
+    "INSERT INTO tb_usuario (nm_usuario, email, senha) VALUES (?, ?, ?)"
+);
+$insert->bind_param("sss", $nomecompleto, $email, $senha);
 
-$query = $conexao ->query ($insert);
-
-if ($query == true){
-    echo "<script> alert('Cadastro realizado com sucesso') history.back(); ,/script";
+if ($insert->execute()) {
+    echo "<script>alert('Cadastro realizado com sucesso'); window.location.href='../index.html';</script>";
+} else {
+    echo "<script>alert('Erro ao cadastrar: " . $insert->error . "'); history.back();</script>";
 }
 
-
-
+header("Location: ../index.html");
+exit;
 ?>
